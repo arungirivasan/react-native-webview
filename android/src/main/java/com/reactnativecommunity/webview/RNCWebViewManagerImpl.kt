@@ -157,7 +157,7 @@ class RNCWebViewManagerImpl(private val newArch: Boolean = false) {
                         }
                         mVideoView = view
                         mCustomViewCallback = callback
-                        activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+                        activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
                         mVideoView.systemUiVisibility = FULLSCREEN_SYSTEM_UI_VISIBILITY
                         activity.window.setFlags(
                             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
@@ -188,6 +188,9 @@ class RNCWebViewManagerImpl(private val newArch: Boolean = false) {
                         if (mVideoView == null) {
                             return
                         }
+
+                          // Restore normal rotation
+                          activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
 
                         // Same logic as above
                         val rootView = rootView
