@@ -189,9 +189,6 @@ class RNCWebViewManagerImpl(private val newArch: Boolean = false) {
                             return
                         }
 
-                          // Restore normal rotation
-                          activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-
                         // Same logic as above
                         val rootView = rootView
                         if (rootView.rootView !== mWebView.rootView) {
