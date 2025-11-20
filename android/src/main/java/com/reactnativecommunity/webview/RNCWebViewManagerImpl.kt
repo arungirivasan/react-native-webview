@@ -157,7 +157,7 @@ class RNCWebViewManagerImpl(private val newArch: Boolean = false) {
                         }
                         mVideoView = view
                         mCustomViewCallback = callback
-                        activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
+                        activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_FULL_USER
                         mVideoView.systemUiVisibility = FULLSCREEN_SYSTEM_UI_VISIBILITY
                         activity.window.setFlags(
                             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
